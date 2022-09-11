@@ -1,0 +1,315 @@
+_type: export
+__export_format: 4
+__export_date: 2022-09-11T12:49:21.449Z
+__export_source: insomnia.desktop.app:v2022.5.1
+resources:
+  - _id: req_3a5a707f4328440080b87f35d3d6a6b1
+    parentId: wrk_b782d01116f54e1a87b7415d07ef7122
+    modified: 1662900434412
+    created: 1662894028584
+    url: http://{{host}}/api/institution/login
+    name: login
+    description: |-
+      {
+          "status": true,
+          "msg": "login success",
+          "data": {
+              "token": "50|GplUvGLYYvbDDOxF2wlWSgKvA5u8ftc17EUZC2lR",
+              "user_id": 5
+          }
+      }
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "email": "school@gmail.com",
+          "password": "pass"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1662309675970.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_b782d01116f54e1a87b7415d07ef7122
+    parentId: null
+    modified: 1662822726121
+    created: 1662309661799
+    name: temp
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_c89310a805794db4899da1171abf0dfd
+    parentId: wrk_b782d01116f54e1a87b7415d07ef7122
+    modified: 1662900435027
+    created: 1662309675970
+    url: http://{{host}}/api/institution/question-groups
+    name: get question groups
+    description: |-
+      {
+          "status": true,
+          "data": [
+              {
+                  "id": 7,
+                  "grade_id": 1,
+                  "subject_id": 6,
+                  "grade_title": "الصف الأول",
+                  "subject_tilte": "الرياضيات",
+                  "count": 0
+              },
+              {
+                  "id": 8,
+                  "grade_id": 1,
+                  "subject_id": 7,
+                  "grade_title": "الصف الأول",
+                  "subject_tilte": "اللغة العربية",
+                  "count": 0
+              },
+              {
+                  "id": 3,
+                  "grade_id": 2,
+                  "subject_id": 6,
+                  "grade_title": "الصف الثاني",
+                  "subject_tilte": "الرياضيات",
+                  "count": 0
+              },
+              {
+                  "id": 4,
+                  "grade_id": 2,
+                  "subject_id": 8,
+                  "grade_title": "الصف الثاني",
+                  "subject_tilte": "العلوم",
+                  "count": 0
+              },
+              {
+                  "id": 1,
+                  "grade_id": 2,
+                  "subject_id": 9,
+                  "grade_title": "الصف الثاني",
+                  "subject_tilte": "الجغرافيا",
+                  "count": 0
+              },
+              {
+                  "id": 2,
+                  "grade_id": 7,
+                  "subject_id": 7,
+                  "grade_title": "الصف الأول",
+                  "subject_tilte": "اللغة العربية",
+                  "count": 3
+              },
+              {
+                  "id": 5,
+                  "grade_id": 13,
+                  "subject_id": 12,
+                  "grade_title": "المستوى الأول",
+                  "subject_tilte": "Nural Network",
+                  "count": 2
+              },
+              {
+                  "id": 6,
+                  "grade_id": 14,
+                  "subject_id": 12,
+                  "grade_title": "المستوى الثاني",
+                  "subject_tilte": "Nural Network",
+                  "count": 3
+              }
+          ]
+      }
+    method: GET
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "private": ""
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: Authorization
+        value: Bearer {{token}}
+    authentication: {}
+    metaSortKey: -1662309675970
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_81db0d492ec14cf5a46f50b7cc3cc992
+    parentId: wrk_b782d01116f54e1a87b7415d07ef7122
+    modified: 1662900436237
+    created: 1662309675968
+    url: http://{{ host }}/api/institution/questions
+    name: get questions
+    description: |-
+      {
+          "status": true,
+          "data": [
+              {
+                  "id": 10,
+                  "text": "what is your name",
+                  "degree": 20,
+                  "category_id": 1,
+                  "duration": 60,
+                  "exam_title": "اختبار الوحدة الاولى",
+                  "category_title": "اجابات متعددة",
+                  "outcomes": [
+                      {
+                          "id": "1",
+                          "title": "استيعاب التفاصيل"
+                      }
+                  ]
+              },
+              {
+                  "id": 11,
+                  "text": "what is your name",
+                  "degree": 20,
+                  "category_id": 1,
+                  "duration": 60,
+                  "exam_title": "اختبار الوحدة الاولى",
+                  "category_title": "اجابات متعددة",
+                  "outcomes": [
+                      {
+                          "id": "1",
+                          "title": "استيعاب التفاصيل"
+                      }
+                  ]
+              }
+          ]
+      }
+    method: GET
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "grade_id": "14",
+          "subject_id": "8",
+          "private": ""
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: Authorization
+        value: Bearer {{token}}
+    authentication: {}
+    metaSortKey: -1662309675968
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_b840f9afc2c247ee8c6e8b4ef5afb608
+    parentId: wrk_b782d01116f54e1a87b7415d07ef7122
+    modified: 1662900437376
+    created: 1662309675966
+    url: http://{{ host }}/api/institution/question
+    name: create question
+    description: |-
+      {
+          "status": false,
+          "msg": "تم حفظ البيانات"
+      }
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "category_id": "1",
+          "text": "what is your name",
+          "degree": "20",
+          "duration": "60",
+          "grade_id": "14",
+          "subject_id": "8",
+          "image": "",
+          "answers": [
+            {
+              "text": "ali",
+              "correct": "1",
+              "image": ""
+            },
+            {
+              "text": "mazin",
+              "correct": "0",
+              "image": ""
+            },
+            {
+              "text": "tahir",
+              "correct": "0",
+              "image": ""
+            }
+          ]
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: Authorization
+        value: Bearer {{token}}
+    authentication: {}
+    metaSortKey: -1662309675966
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_bec8a2a787fb204f2bc0b5b4de7695d6570bc248
+    parentId: wrk_b782d01116f54e1a87b7415d07ef7122
+    modified: 1662826398792
+    created: 1662309661805
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: {}
+    color: null
+    isPrivate: false
+    metaSortKey: 1662309661805
+    _type: environment
+  - _id: jar_bec8a2a787fb204f2bc0b5b4de7695d6570bc248
+    parentId: wrk_b782d01116f54e1a87b7415d07ef7122
+    modified: 1662309661807
+    created: 1662309661807
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_c6d006be47dc487195b2b78cbfa7a144
+    parentId: wrk_b782d01116f54e1a87b7415d07ef7122
+    modified: 1662309661801
+    created: 1662309661801
+    fileName: test
+    contents: ""
+    contentType: yaml
+    _type: api_spec
+  - _id: env_9dc5c1d890cd4fa2b70c3db4e4753b71
+    parentId: env_bec8a2a787fb204f2bc0b5b4de7695d6570bc248
+    modified: 1662894101868
+    created: 1662826402044
+    name: temp-env
+    data:
+      host: education-back.tk
+      token: 50|GplUvGLYYvbDDOxF2wlWSgKvA5u8ftc17EUZC2lR
+    dataPropertyOrder:
+      "&":
+        - host
+        - token
+    color: null
+    isPrivate: false
+    metaSortKey: 1662826402044
+    _type: environment
